@@ -2,6 +2,11 @@ create constraint on (c:Country) assert c.code is unique;
 create constraint on (e:Entity) assert e.id is unique;
 create constraint on (f:Filing) assert f.id is unique;
 create index on :Filing(sar_id);
+create index on :Entity(name);
+create index on :Filing(begin);
+create index on :Filing(end);
+create index on :Filing(amount);
+create index on :Country(name);
 
 load csv with headers from "https://raw.githubusercontent.com/jexp/fincen/main/download_transactions_map.csv" as value
 merge (s:Filing {id:value.id}) set s += value, s.sar_id = value.icij_sar_id;
