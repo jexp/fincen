@@ -22,6 +22,27 @@ All data is from the ICIJ Web-Visualization (JS file)
 If you have fixes, or new ideas for queries, please send a pull request.
 
 If something doesn't work, please create an issue.
+
+
+== Pre-Populated Demo Databases
+
+Demo Server with Neo4j Browser
+
+* https://demo.neo4jlabs.com:7473 (user, password, database = fincen)
+
+Sandbox
+
+* Sandbox: https://10-0-1-92-35670.neo4jsandbox.com/browser/ (user, password = fincen)
+* Bloom: https://10-0-1-92-35670.neo4jsandbox.com/browser/bloom/
+
+=== Dump File
+
+* link:fincen.dump[fincen.dump]
+* To import into Neo4j Aura, use the "Upload Data" feature and drop the dump file
+* For Neo4j Desktop, add the file to your project and use the "Imort Dump" from the 3-dots menu to import
+* For manual import use `neo4j-admin load --from fincen.dump` in a stopped dmbs 
+* For a running 4.x Enterprise dbms, you need to add `--database fincen` and then use `:use system` and `create database fincen` to activate it.
+
 ==  Import into Neo4j
 
 === Neo4j Sandbox (3 days)
