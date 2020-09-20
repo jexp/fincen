@@ -6,9 +6,11 @@ https://www.icij.org/investigations/fincen-files/
 
 image::https://media.icij.org/uploads/2020/09/FinCEN_Files_ICIJ_1920px.jpg[width=600]
 
-Files are not available for download yet, will be from: https://www.icij.org/investigations/fincen-files/download-fincen-files-transaction-data/
+https://media.icij.org/uploads/2020/09/download_data_fincen_files.zip[*Files are available for download now*], via from: https://www.icij.org/investigations/fincen-files/download-fincen-files-transaction-data/
 
-The files here are scraped from their site (https://www.icij.org/investigations/fincen-files/explore-the-fincen-files-data/[Explore The FinCen Data Files])
+The download contains two CSV files with the same data as our JSON so I'll adjust the instructions below.
+
+The files here were scraped from their site (https://www.icij.org/investigations/fincen-files/explore-the-fincen-files-data/[Explore The FinCen Data Files])
 
 * https://www.icij.org/investigations/fincen-files/unchecked-by-global-banks-dirty-cash-destroys-dreams-and-lives/[Unchecked by global banks, dirty cash destroys dreams and lives]
 * https://www.icij.org/investigations/fincen-files/global-banks-defy-u-s-crackdowns-by-serving-oligarchs-criminals-and-terrorists/[Global banks defy U.S. crackdowns by serving oligarchs, criminals and terrorists]
@@ -52,6 +54,9 @@ Sandbox
 * For a running 4.x Enterprise dbms, you need to add `--database fincen` and then use `:use system` and `create database fincen` to activate it.
 
 ==  Import into Neo4j
+
+* The scraped JSON files can be imported using link:fincen.cypher[`fincen.cypher`]
+* The newly available CSV files can be imported using link:fincen_csv.cypher[`fincen_csv.cypher`]
 
 === Neo4j Sandbox (3 days)
 

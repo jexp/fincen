@@ -3,7 +3,7 @@ create constraint on (e:Entity) assert e.id is unique;
 create constraint on (f:Filing) assert f.id is unique;
 create index on :Filing(sar_id);
 
-load csv with headres from "https://raw.githubusercontent.com/jexp/fincen/main/download_transactions_map.csv" as value
+load csv with headers from "https://raw.githubusercontent.com/jexp/fincen/main/download_transactions_map.csv" as value
 merge (s:Filing {id:value.id}) set s += value, s.sar_id = value.icij_sar_id;
 
 load csv with headers from "https://raw.githubusercontent.com/jexp/fincen/main/download_bank_connections.csv" as value
@@ -21,8 +21,8 @@ merge (other)-[:COUNTRY]->(c);
 match (f:Filing)
 set f.transactions = toInteger(f.number_transactions)
 set f.amount = toFloat(f.amount_transactions)
-set f.end=apoc.temporal.parse(f.end_date,"MMM dd, yyyy")
-set f.begin=apoc.temporal.parse(f.begin_date,"MMM dd, yyyy")
+set f.end=date(apoc.temporal.toZonedTemporal(f.end_date,"MMM dd, yyyy"))
+set f.begin=date(apoc.temporal.toZonedTemporal(f.begin_date,"MMM dd, yyyy"))
 
 merge (ben:Entity {id:f.beneficiary_bank_id})
 on create set ben.name = f.beneficiary_bank, ben.location = point({latitude:toFloat(f.beneficiary_lat), longitude:toFloat(f.beneficiary_lng)})
