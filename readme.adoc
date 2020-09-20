@@ -6,11 +6,11 @@ https://www.icij.org/investigations/fincen-files/
 
 image::https://media.icij.org/uploads/2020/09/FinCEN_Files_ICIJ_1920px.jpg[width=600]
 
-https://media.icij.org/uploads/2020/09/download_data_fincen_files.zip[*Files are available for download now*], via from: https://www.icij.org/investigations/fincen-files/download-fincen-files-transaction-data/
+https://media.icij.org/uploads/2020/09/download_data_fincen_files.zip[*CSV Files are available for download now*], via from: https://www.icij.org/investigations/fincen-files/download-fincen-files-transaction-data/
 
 The download contains two CSV files with the same data as our JSON so I'll adjust the instructions below.
 
-The files here were scraped from their site (https://www.icij.org/investigations/fincen-files/explore-the-fincen-files-data/[Explore The FinCen Data Files])
+The JSON files here were scraped from their site (https://www.icij.org/investigations/fincen-files/explore-the-fincen-files-data/[Explore The FinCen Data Files])
 
 * https://www.icij.org/investigations/fincen-files/unchecked-by-global-banks-dirty-cash-destroys-dreams-and-lives/[Unchecked by global banks, dirty cash destroys dreams and lives]
 * https://www.icij.org/investigations/fincen-files/global-banks-defy-u-s-crackdowns-by-serving-oligarchs-criminals-and-terrorists/[Global banks defy U.S. crackdowns by serving oligarchs, criminals and terrorists]
@@ -27,7 +27,7 @@ ____
 
 == Feedback and Contributions
 
-All data is from the ICIJ Web-Visualization (JS file)
+All data is from the ICIJ Web-Visualization (JS files) or download section.
 
 If you have fixes, or new ideas for queries, please send a pull request.
 
@@ -62,7 +62,7 @@ Sandbox
 
 . Start Blank Neo4j sandbox https://sandbox.neo4j.com/?usecase=blank-sandbox
 . Open Neo4j Browser with the button
-. Copy or drag&drop link:fincen.cypher[`fincen.cypher`] into the editor window on top and run with the triangular run button
+. Copy or drag&drop link:fincen_csv.cypher[`fincen_csv.cypher`] into the editor window on top and run with the triangular run button
 . Explore with the sidebar, e.g. clicking on `Filing`
 . To explore interactively and visually, use the blue "Open with Bloom" button and use "neo4j" as a username, and the password (under the key icon) as password to log in
 
@@ -75,7 +75,7 @@ Sandbox
 . Click on the three dots and then "Manage", click on "Plugins" and Install "APOC"
 . Start the database with the Start Button (Triangle)
 . Open Neo4j Browser (e.g. with the blue "Open" button) or by pressing cmd+k or ctrl+k and entering "Browser"
-. Copy or drag&drop link:fincen.cypher[`fincen.cypher`] into the editor window on top and run with the triangular run button
+. Copy or drag&drop link:fincen_csv.cypher[`fincen_csv.cypher`] into the editor window on top and run with the triangular run button
 . Explore with the sidebar, e.g. clicking on `Filing`
 . To explore interactively and visually, select "Open with Bloom" from the blue "Open" button drop-down
 
@@ -86,7 +86,7 @@ Sandbox
 . Create a new 1GB database
 . Save the password
 . Open Neo4j Browser with the button
-. Copy or drag&drop link:fincen.cypher[`fincen.cypher`] into the editor window on top and run with the triangular run button
+. Copy or drag&drop link:fincen_csv.cypher[`fincen_csv.cypher`] into the editor window on top and run with the triangular run button
 . Explore with the sidebar, e.g. clicking on `Filing`
 . To explore interactively and visually, select "Open with Bloom" from the blue "Open" button drop-down
 
