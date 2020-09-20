@@ -6,12 +6,6 @@ https://www.icij.org/investigations/fincen-files/
 
 image::https://media.icij.org/uploads/2020/09/FinCEN_Files_ICIJ_1920px.jpg[width=600]
 
-https://media.icij.org/uploads/2020/09/download_data_fincen_files.zip[*CSV Files are available for download now*], via from: https://www.icij.org/investigations/fincen-files/download-fincen-files-transaction-data/
-
-The download contains two CSV files with the same data as our JSON so I'll adjust the instructions below.
-
-The JSON files here were scraped from their site (https://www.icij.org/investigations/fincen-files/explore-the-fincen-files-data/[Explore The FinCen Data Files])
-
 * https://www.icij.org/investigations/fincen-files/unchecked-by-global-banks-dirty-cash-destroys-dreams-and-lives/[Unchecked by global banks, dirty cash destroys dreams and lives]
 * https://www.icij.org/investigations/fincen-files/global-banks-defy-u-s-crackdowns-by-serving-oligarchs-criminals-and-terrorists/[Global banks defy U.S. crackdowns by serving oligarchs, criminals and terrorists]
 * https://www.icij.org/investigations/fincen-files/mining-sars-data/[How the ICIJ did the investiation]
@@ -24,6 +18,13 @@ These were some of the many tools to help rebuild the nuanced picture of a broke
 link:https://translate.google.com/translate?sl=auto&tl=en&u=https%3A%2F%2Fwww.eluniverso.com%2Fnoticias%2F2020%2F09%2F20%2Fnota%2F7983397%2Ffincen-files-revoltijo-informes-secretos-datos-condenatorios-sobre[(source)]
 ____
 
+=== Data
+
+https://media.icij.org/uploads/2020/09/download_data_fincen_files.zip[*CSV Files are available for download now*], via: https://www.icij.org/investigations/fincen-files/download-fincen-files-transaction-data/
+
+The download contains two CSV files with the same data as our JSON so I'll adjust the instructions below.
+
+The JSON files used here were scraped from their site (https://www.icij.org/investigations/fincen-files/explore-the-fincen-files-data/[Explore The FinCen Data Files])
 
 == Feedback and Contributions
 
