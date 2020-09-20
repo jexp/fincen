@@ -1,0 +1,95 @@
+= ICIJ FinCen Dataset in Neo4j
+
+== ICIJ Investigation
+
+https://www.icij.org/investigations/fincen-files/
+
+image::https://media.icij.org/uploads/2020/09/FinCEN_Files_ICIJ_1920px.jpg[width=600]
+
+Files are not available for download yet, will be from: https://www.icij.org/investigations/fincen-files/download-fincen-files-transaction-data/
+
+The files here are scraped from their site (https://www.icij.org/investigations/fincen-files/explore-the-fincen-files-data/[Explore The FinCen Data Files])
+
+* https://www.icij.org/investigations/fincen-files/unchecked-by-global-banks-dirty-cash-destroys-dreams-and-lives/[Unchecked by global banks, dirty cash destroys dreams and lives]
+* https://www.icij.org/investigations/fincen-files/global-banks-defy-u-s-crackdowns-by-serving-oligarchs-criminals-and-terrorists/[Global banks defy U.S. crackdowns by serving oligarchs, criminals and terrorists]
+* https://www.icij.org/investigations/fincen-files/mining-sars-data/[How the ICIJ did the investiation]
+
+==  Import into Neo4j
+
+
+=== Neo4j Sandbox (3 days)
+
+. Start Blank Neo4j sandbox https://sandbox.neo4j.com/?usecase=blank-sandbox
+. Open Neo4j Browser with the button
+. Copy or drag&drop link:fincen.cypher[`fincen.cypher`] into the editor window on top and run with the triangular run button
+. Explore with the sidebar, e.g. clicking on `Filing`
+. To explore interactively and visually, use the blue "Open with Bloom" button and use "neo4j" as a username, and the password (under the key icon) as password to log in
+
+
+=== Neo4j Desktop (local installation)
+
+. Download Neo4j Desktop https://neo4j.com/download
+. Install locally
+. Create a new project and a new database, call it eg. FinCen, set a password and remember it
+. Click on the three dots and then "Manage", click on "Plugins" and Install "APOC"
+. Start the database with the Start Button (Triangle)
+. Open Neo4j Browser (e.g. with the blue "Open" button) or by pressing cmd+k or ctrl+k and entering "Browser"
+. Copy or drag&drop link:fincen.cypher[`fincen.cypher`] into the editor window on top and run with the triangular run button
+. Explore with the sidebar, e.g. clicking on `Filing`
+. To explore interactively and visually, select "Open with Bloom" from the blue "Open" button drop-down
+
+=== Neo4j Aura Cloud Database
+
+. Log into https://neo4j.com/cloud/aura (or directly https://console.neo4j.io)
+. Put in your credit card information
+. Create a new 1GB database
+. Save the password
+. Open Neo4j Browser with the button
+. Copy or drag&drop link:fincen.cypher[`fincen.cypher`] into the editor window on top and run with the triangular run button
+. Explore with the sidebar, e.g. clicking on `Filing`
+. To explore interactively and visually, select "Open with Bloom" from the blue "Open" button drop-down
+
+=== Example Queries
+
+.Biggest Filings
+[source,cypher]
+----
+MATCH (f:Filing)
+RETURN f ORDER BY f.amount DESC LIMIT 10;
+----
+
+.Biggest Filing with participants
+[source,cypher]
+----
+MATCH (f:Filing)
+WITH f ORDER BY f.amount DESC LIMIT 10
+MATCH (f)--(e:Entity)
+RETURN *
+----
+
+.Entities with highest transaction volume
+[source,cypher]
+----
+MATCH (e:Entity)--(f:Filing)
+WITH e, round(sum(f.amount)) as total
+WITH e, total ORDER BY total DESC LIMIT 10
+OPTIONAL MATCH (e)-[:COUNTRY]-(c:Country)
+RETURN e.name, c.name, total
+----
+
+.Money flows between banks
+[source,cypher]
+----
+MATCH (source:Entity)<-[:ORIGINATOR]-(f:Filing)-[:BENEFITS]->(target:Entity)
+WITH source, target, round(sum(f.amount)) as total ORDER BY total DESC LIMIT 10
+RETURN source.name, target.name, total
+----
+
+
+== Feedback and Contributions
+
+All data is from the ICIJ Web-Visualization (JS file)
+
+If you have fixes, or new ideas for queries, please send a pull request.
+
+If something doesn't work, please create an issue.
