@@ -16,13 +16,13 @@ The files here were scraped from their site (https://www.icij.org/investigations
 * https://www.icij.org/investigations/fincen-files/global-banks-defy-u-s-crackdowns-by-serving-oligarchs-criminals-and-terrorists/[Global banks defy U.S. crackdowns by serving oligarchs, criminals and terrorists]
 * https://www.icij.org/investigations/fincen-files/mining-sars-data/[How the ICIJ did the investiation]
 
-.ICIJ used Neo4j and Linkurious again for their investigation
-====
+[quote, ICIJ used Neo4j and Linkurious again for their investigation]
+____
 Lastly, ICIJ used charting databases (Neo4J and Linkurious) to visualize and explore the 400 FinCEN Files spreadsheets containing data on 100,000 transactions. 
 These were some of the many tools to help rebuild the nuanced picture of a broken system. 
 
 link:https://translate.google.com/translate?sl=auto&tl=en&u=https%3A%2F%2Fwww.eluniverso.com%2Fnoticias%2F2020%2F09%2F20%2Fnota%2F7983397%2Ffincen-files-revoltijo-informes-secretos-datos-condenatorios-sobre[(source)]
-====
+____
 
 
 == Feedback and Contributions
