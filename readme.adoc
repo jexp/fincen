@@ -38,7 +38,7 @@ If something doesn't work, please create an issue.
 
 Demo Server with Neo4j Browser
 
-* https://demo.neo4jlabs.com:7473 (user, password, database = fincen)
+* link:https://demo.neo4jlabs.com:7473/browser?username=fincen&authToken=fincen&database=fincen[demo.neo4jlabs.com] (user, password, database = fincen)
 
 Sandbox
 
@@ -123,6 +123,8 @@ WITH f ORDER BY f.amount DESC LIMIT 10
 MATCH (f)--(e:Entity)
 RETURN *
 ----
+
+image::fincen-browser.png[width=600]
 
 .Entities with highest transaction volume
 [source,cypher]
