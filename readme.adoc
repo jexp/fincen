@@ -14,8 +14,15 @@ The files here are scraped from their site (https://www.icij.org/investigations/
 * https://www.icij.org/investigations/fincen-files/global-banks-defy-u-s-crackdowns-by-serving-oligarchs-criminals-and-terrorists/[Global banks defy U.S. crackdowns by serving oligarchs, criminals and terrorists]
 * https://www.icij.org/investigations/fincen-files/mining-sars-data/[How the ICIJ did the investiation]
 
-==  Import into Neo4j
 
+== Feedback and Contributions
+
+All data is from the ICIJ Web-Visualization (JS file)
+
+If you have fixes, or new ideas for queries, please send a pull request.
+
+If something doesn't work, please create an issue.
+==  Import into Neo4j
 
 === Neo4j Sandbox (3 days)
 
@@ -49,7 +56,23 @@ The files here are scraped from their site (https://www.icij.org/investigations/
 . Explore with the sidebar, e.g. clicking on `Filing`
 . To explore interactively and visually, select "Open with Bloom" from the blue "Open" button drop-down
 
+== Exploration
+
+=== Neo4j Bloom
+
+image::bloom-fincen.png[width=800]
+
+In Neo4j Bloom, you can e.g. search for `Filing Entity` in the search bar.
+
+You can configure the sidebar with icons for Countries, Entities and filings
+
+You can set a rule based styling e.g. for Filings, I did a size based on `amount` with the min `100000` to `0.5x` and the max `100000000` to `2x`
+
+image::bloom-sidebar.png[width=200]
+
 === Example Queries
+
+To run in Neo4j Browser just copy them into the editor on top and run with the triangular run button.
 
 .Biggest Filings
 [source,cypher]
@@ -86,10 +109,3 @@ RETURN source.name, target.name, total
 ----
 
 
-== Feedback and Contributions
-
-All data is from the ICIJ Web-Visualization (JS file)
-
-If you have fixes, or new ideas for queries, please send a pull request.
-
-If something doesn't work, please create an issue.

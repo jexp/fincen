@@ -3,14 +3,14 @@ create constraint on (e:Entity) assert e.id is unique;
 create constraint on (f:Filing) assert f.id is unique;
 create index on :Filing(sar_id);
 
-call apoc.load.json("file:///fincen/countries.json") yield value
+call apoc.load.json("https://raw.githubusercontent.com/jexp/fincen/main/countries.json") yield value
 merge (c:Country {code:value.iso3}) set c.name = value.name, c.tld = value.iso2, c.location = point({latitude:toFloat(value.lat), longitude:toFloat(value.lng)})
 with * where not value.exist_transaction is null set c:ExistTransactions;
 
-call apoc.load.json("file:///fincen/sar-data.json") yield value
+call apoc.load.json("https://raw.githubusercontent.com/jexp/fincen/main/sar-data.json") yield value
 merge (s:Filing {id:value.id}) set s += value;
 
-call apoc.load.json("file:///fincen/sar-details.json") yield value
+call apoc.load.json("https://raw.githubusercontent.com/jexp/fincen/main/sar-details.json") yield value
 match (f:Filing {sar_id:value.sar_id})
 merge (filer:Entity {id:value.filer_org_name_id}) on create set filer.name = value.filer_org_name, 
 filer.location = point({latitude:toFloat(value.filer_org_lat),longitude:toFloat(value.filer_org_lng)})
