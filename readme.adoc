@@ -102,6 +102,8 @@ You can set a rule based styling e.g. for Filings, I did a size based on `amount
 
 image::bloom-sidebar.png[width=200]
 
+To not have to do that manually, you can also import the link:fincen.neo4j-bloom-perspective[bloom perspective file] in this repository.
+
 === Example Queries
 
 To run in Neo4j Browser just copy them into the editor on top and run with the triangular run button.
