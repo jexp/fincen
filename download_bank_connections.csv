@@ -540,7 +540,7 @@ icij_sar_id,filer_org_name_id,filer_org_name,entity_b_id,entity_b,entity_b_count
 3244,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,axis-bank-ltd-mumbai-india-ind,Axis Bank Ltd,India,IND
 3244,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,icici-bank-limited-mumbai-india-ind,Icici Bank Limited,India,IND
 3244,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,canadian-imperial-bank-of-commerce-toronto-canada-can,Canadian Imperial Bank of Commerce,Canada,CAN
-3244,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,amani-makungu-at-bank-of-montreal-montreal-canada-can,Amani Makungu At Bank of Montreal,Canada,CAN
+3244,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,bank-of-montreal-canada-can,Bank of Montreal,Canada,CAN
 3429,deutsche-bank-ag,Deutsche Bank AG,fidelity-bank-plc-nigeria-nga,Fidelity Bank Plc,Nigeria,NGA
 3429,deutsche-bank-ag,Deutsche Bank AG,skye-bank-plc-nigeria-nga,Skye Bank Plc,Nigeria,NGA
 3838,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,abn-amro-bank-nv-amsterdam-netherlands-nld,ABN Amro Bank N.V. ,Netherlands,NLD
@@ -2761,7 +2761,7 @@ icij_sar_id,filer_org_name_id,filer_org_name,entity_b_id,entity_b,entity_b_count
 2405,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,vtb-bank-almaty-kazakhstan-kaz,VTB Bank,Kazakhstan,KAZ
 2405,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,national-bank-of-ras-ras-al-khaimah-uae-are,National Bank of Ras,United Arab Emirates,ARE
 2405,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,banque-de-commerce-et-de-geneva-switzerland-che,Banque De Commerce Et De,Switzerland,CHE
-2405,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,uzbalttrans-astana-too-at-bta-bank-almaty-kazakhstan-kaz,Uzbalttrans-Astana Too At BTA Bank,Kazakhstan,KAZ
+2405,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,bank-almaty-kazakhstan-kaz,BTA Bank,Kazakhstan,KAZ
 2405,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,alliance-bank-almaty-kazakhstan-kaz,Alliance Bank,Kazakhstan,KAZ
 2405,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,petrocommerce-ojsc-bank-moscow-russia-rus,Petrocommerce OJSC Bank,Russia,RUS
 2650,deutsche-bank-ag,Deutsche Bank AG,bank-of-communications-china-chn,Bank of Communications,China,CHN
@@ -3243,7 +3243,7 @@ icij_sar_id,filer_org_name_id,filer_org_name,entity_b_id,entity_b,entity_b_count
 2319,deutsche-bank-ag,Deutsche Bank AG,deutsche-bank-ag-amsterdam-netherlands-nld,Deutsche Bank AG,Netherlands,NLD
 2319,deutsche-bank-ag,Deutsche Bank AG,ceskoslovenska-obchodni-banka-as-czech-republic-cze,Ceskoslovenska Obchodni Banka AS,Czech Republic,CZE
 2474,china-investment-corporation,China Investment Corporation,trasta-komercbanka-riga-latvia-lva,Trasta Komercbanka,Latvia,LVA
-4152,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,bank-of-montreal-montreal-canada-can,Bank of Montreal,Canada,CAN
+4152,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,bank-of-montreal-canada-can,Bank of Montreal,Canada,CAN
 2471,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,albaraka-bank-giza-egypt-egy,Albaraka Bank,Egypt,EGY
 2471,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,vtb-bank-austria-aut,VTB Bank,Austria,AUT
 2471,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,dbs-bank-ltd-singapore-sgp,DBS Bank Ltd,Singapore,SGP
@@ -4208,7 +4208,7 @@ icij_sar_id,filer_org_name_id,filer_org_name,entity_b_id,entity_b,entity_b_count
 4151,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,nordea-bank-danmark-as-copenhagen-denmark-dnk,Nordea Bank Danmark A/S,Denmark,DNK
 4151,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,nordea-bank-ab-stockholm-sweden-swe,Nordea Bank AB,Sweden,SWE
 4151,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,commonwealth-bank-of-australia-sydney-australia-aus,Commonwealth Bank of Australia,Australia,AUS
-4151,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,bank-of-montreal-toronto-canada-can,Bank of Montreal,Canada,CAN
+4151,the-bank-of-new-york-mellon-corp,The Bank of New York Mellon Corp.,bank-of-montreal-canada-can,Bank of Montreal,Canada,CAN
 3470,deutsche-bank-ag,Deutsche Bank AG,woori-bank-south-korea-kor,Woori Bank,South Korea,KOR
 3470,deutsche-bank-ag,Deutsche Bank AG,shinhan-bank-south-korea-kor,Shinhan Bank,South Korea,KOR
 3470,deutsche-bank-ag,Deutsche Bank AG,kyongnam-bank-south-korea-kor,Kyongnam Bank,South Korea,KOR

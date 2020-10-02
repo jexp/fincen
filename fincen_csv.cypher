@@ -26,8 +26,8 @@ merge (other)-[:COUNTRY]->(c);
 match (f:Filing)
 set f.transactions = toInteger(f.number_transactions)
 set f.amount = toFloat(f.amount_transactions)
-set f.end=date(apoc.temporal.toZonedTemporal(f.end_date,"MMM dd, yyyy"))
-set f.begin=date(apoc.temporal.toZonedTemporal(f.begin_date,"MMM dd, yyyy"))
+set f.end=date(datetime({epochSeconds:coalesce(apoc.date.parse(f.end_date,"s","MMM dd, yyyy"),0)}))
+set f.begin=date(datetime({epochSeconds:coalesce(apoc.date.parse(f.begin_date,"s","MMM dd, yyyy"),0)}))
 
 merge (ben:Entity {id:f.beneficiary_bank_id})
 on create set ben.name = f.beneficiary_bank, ben.location = point({latitude:toFloat(f.beneficiary_lat), longitude:toFloat(f.beneficiary_lng)})
